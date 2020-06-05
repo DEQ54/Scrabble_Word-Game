@@ -17,14 +17,6 @@
 	-fx-font-weight:bold;
 	-fx-spin-enabled:true ;
 }
-.input{
-	-fx-background-color:linear-gradient(#58595B ,#231F20 90%);
-	-fx-text-fill:white ;
-	-fx-font-weight:bold;
-	-fx-font-size:15px;
-	-fx-background-image:url("yakuza.jpg");
-	
-}
 .BOX{
 	-fx-spacing:30px;
 	-fx-border-color:white ;
@@ -33,59 +25,13 @@
 	-fx-background-color:#414042;
 	-fx-background-image:url("congrat.jpg");
 	}
-.box{
-	-fx-alignment:center ;
-	-fx-spacing:0px;
-	-fx-background-image:url("yakuza.jpg");
-	-fx-background-repeat:no-repeat ;
-	-fx-background-size:stretch ;
-}
-.bttn{
-	-fx-text-fill:white;
-	-fx-border-insets:30px;
-	-fx-background-color:#334596;
-	-fx-pref-height:40px;
-	-fx-pref-width:100px;
-}
-.name{
-	-fx-font-weight:bold;
-	-fx-text-fill:white ;
-	-fx-alignment:center-right ;
-}
-.namebox{
-	-fx-padding:10px;
-	-fx-spacing:10px;
-	-fx-background-color:linear-gradient(#58595B ,#231F20 90%);
-	-fx-alignment:center ;
-	-fx-opacity:0.8;
-}
-.pword{
-	-fx-text-fill:blue ;
-	-fx-font-size:20px;
-}
-.name{
-	-fx-text-fill:white ;
-	-fx-font-weight:bold;	
-}
-
-.passwordbox{
-	-fx-padding:10px;
-	-fx-spacing:10px;
-	-fx-background-color:linear-gradient(#58595B ,#231F20 90%);
-	-fx-alignment:center ;
-	-fx-opacity:0.8;
-}
 .HintRegion{
     -fx-background-color:linear-gradient(#9894b0,#334596 90%,#9894b0);
 	-fx-pref-height:50px;
 	-fx-pref-width:100px;
 	-fx-text-fill:black;
 }
-.username{
-	-fx-padding:10px;
-	-fx-text-fill:white ;
-	-fx-font-weight:bold;
-}
+
 .DisplayedScore{
 	-fx-font-size:15px;
 	-fx-text-fill:white ;
