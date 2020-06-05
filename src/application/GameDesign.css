@@ -1,0 +1,212 @@
+
+.main{
+
+	-fx-min-height:1cm;
+    -fx-font-size:20px;
+    -fx-font-style:oblique ;
+    -fx-font-family:cursive;
+    -fx-font-weight:bold;
+    -fx-border-color:lightblue ;
+    -fx-border-radius:10px;
+	}
+.hint{
+	-fx-text-alignment:center;
+	-fx-text-fill:white ;
+	-fx-padding:5px;
+	-fx-font-size:14px;
+	-fx-font-weight:bold;
+	-fx-spin-enabled:true ;
+}
+.input{
+	-fx-background-color:linear-gradient(#58595B ,#231F20 90%);
+	-fx-text-fill:white ;
+	-fx-font-weight:bold;
+	-fx-font-size:15px;
+	-fx-background-image:url("yakuza.jpg");
+	
+}
+.BOX{
+	-fx-spacing:30px;
+	-fx-border-color:white ;
+	-fx-pref-height:100px;
+	-fx-padding:20px;
+	-fx-background-color:#414042;
+	-fx-background-image:url("congrat.jpg");
+	}
+.box{
+	-fx-alignment:center ;
+	-fx-spacing:0px;
+	-fx-background-image:url("yakuza.jpg");
+	-fx-background-repeat:no-repeat ;
+	-fx-background-size:stretch ;
+}
+.bttn{
+	-fx-text-fill:white;
+	-fx-border-insets:30px;
+	-fx-background-color:#334596;
+	-fx-pref-height:40px;
+	-fx-pref-width:100px;
+}
+.name{
+	-fx-font-weight:bold;
+	-fx-text-fill:white ;
+	-fx-alignment:center-right ;
+}
+.namebox{
+	-fx-padding:10px;
+	-fx-spacing:10px;
+	-fx-background-color:linear-gradient(#58595B ,#231F20 90%);
+	-fx-alignment:center ;
+	-fx-opacity:0.8;
+}
+.pword{
+	-fx-text-fill:blue ;
+	-fx-font-size:20px;
+}
+.name{
+	-fx-text-fill:white ;
+	-fx-font-weight:bold;	
+}
+
+.passwordbox{
+	-fx-padding:10px;
+	-fx-spacing:10px;
+	-fx-background-color:linear-gradient(#58595B ,#231F20 90%);
+	-fx-alignment:center ;
+	-fx-opacity:0.8;
+}
+.HintRegion{
+    -fx-background-color:linear-gradient(#9894b0,#334596 90%,#9894b0);
+	-fx-pref-height:50px;
+	-fx-pref-width:100px;
+	-fx-text-fill:black;
+}
+.username{
+	-fx-padding:10px;
+	-fx-text-fill:white ;
+	-fx-font-weight:bold;
+}
+.DisplayedScore{
+	-fx-font-size:15px;
+	-fx-text-fill:white ;
+	-fx-font-weight:bold;
+	
+}
+.AssignedScorePoint{
+	-fx-text-fill:white;
+	-fx-font-size:30px;
+	-fx-font-weight:bold;
+}
+.ScoreRegion{
+	-fx-alignment:center ;
+	-fx-spacing:10px;
+}
+.DashBoard{
+
+}
+.PointArea{
+	-fx-border-color:white ;
+    -fx-pref-width:300px;
+    -fx-border-radius:200px;
+    -fx-background-size:cover ;
+}
+.UserInfo{
+	-fx-border-color:white ;
+	-fx-pref-width:130px;
+	-fx-border-radius:10px;
+
+}
+
+.DashRegion{
+	-fx-padding:20px;
+	
+}
+.btn{
+	-fx-text-fill:white;
+    -fx-border-insets:30px;
+    -fx-background-color:#334596;
+    -fx-pref-height:50px;
+    -fx-pref-width:100px;
+	
+}
+.bottom{
+	-fx-alignment:bottom-center ;
+	-fx-spacing:30px;
+	-fx-padding:50px;
+}
+
+.IntermediateLevelAnswer{
+	-fx-min-width:30px;
+    	-fx-min-height:30px;
+    	-fx-display-caret: false;
+    	-fx-spacing:10px;
+    	-fx-background-color:linear-gradient(#9894b0,#334596 90%,#9894b0);
+    	-fx-focus-traversable:false ;
+    	-fx-font-size:20px;
+    	-fx-text-fill:black;
+    	-fx-alignment:center ;
+}
+.BeginnerLevelAnswer{
+	-fx-min-width:30px;
+    	-fx-min-height:30px;
+    	-fx-display-caret: false;
+    	-fx-spacing:10px;
+    	-fx-background-color:linear-gradient(#9894b0,#334596 90%,#9894b0);
+    	-fx-focus-traversable:false ;
+    	-fx-font-size:20px;
+    	-fx-text-fill:black;
+    	-fx-alignment:center ;
+}
+	
+.MasterLevelAnswer{
+        -fx-background-color:linear-gradient(#9894b0,#334596 90%,#9894b0);
+        -fx-display-caret: false;
+    	-fx-min-width:30px;
+    	-fx-min-height:30px;
+    	-fx-spacing:10px;
+        -fx-focus-traversable:false ;
+    	-fx-font-size:20px;
+    	-fx-text-fill:black;
+    	-fx-alignment:center ;
+}
+.AnswerRegion{
+	-fx-border-insets:20px;
+	-fx-padding:10px;
+	-fx-spacing:10px;
+}
+.LevelDesign{
+	-fx-text-fill:white;
+}
+.root{
+	-fx-background-color:#7a6fd1;
+}
+.FirstBox{
+	-fx-alignment:bottom-center ;
+	-fx-spacing:10px;
+}
+.ThirdBox{
+	-fx-spacing:10px;
+	-fx-alignment:bottom-center ;
+}
+.SecondBox{
+	-fx-alignment:bottom-center ;
+	-fx-spacing:10px;
+}
+.FirstLevelBox{
+	-fx-font-size:20px;
+    -fx-min-width:50px;
+    -fx-min-height:50px;
+    -fx-background-color:#737180;
+}
+.ThirdLevelBox{
+	-fx-font-size:20px;
+    -fx-min-width:50px;
+    -fx-min-height:50px;
+    -fx-background-color:#737180;
+}
+.SecondLevelBox{
+	-fx-font-size:20px;
+    -fx-min-width:50px;
+    -fx-min-height:50px;
+    -fx-background-color:#737180;
+}
