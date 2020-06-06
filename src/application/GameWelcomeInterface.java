@@ -13,7 +13,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
 import javax.swing.*;
 
 
@@ -26,8 +25,7 @@ ComboBox<String>comboBox;
         primaryStage.setHeight(550);
         Pane root = new Pane();
         comboBox = new ComboBox<>();
-        comboBox.getItems().addAll(
-                "LEVEL 1","LEVEL 2","LEVEL 3");
+        comboBox.getItems().addAll("LEVEL 1","LEVEL 2","LEVEL 3");
         comboBox.setPromptText("SELECT LEVEL");
         comboBox.setValue("SELECT LEVEL");
         comboBox.setPrefWidth(160);
@@ -73,10 +71,8 @@ ComboBox<String>comboBox;
                     mm.start(primaryStage);
                     primaryStage.show();
                 }catch (Exception e){
-
                     e.printStackTrace();
                 }
-
                }
                else if(comboBox.getValue()=="LEVEL 2"){
                    GameLevelTwo nn=new GameLevelTwo();
@@ -84,7 +80,6 @@ ComboBox<String>comboBox;
                        nn.start(primaryStage);
                        primaryStage.show();
                    }catch (Exception e){
-
                        e.printStackTrace();
                    }
                }
@@ -110,11 +105,9 @@ ComboBox<String>comboBox;
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-      Image image=new Image("application/Images/backs.jpg");
+    Image image=new Image("application/Images/backs.jpg");
     Image images=new Image("application/Images/images.png");
         public static void main(String[] args) {
             launch(args);
         }
-
     }

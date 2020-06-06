@@ -89,8 +89,6 @@ public class GameLoginForm extends Application {
         sign.setStyle("-fx-font-family:Tahoma; -fx-text-fill:white; -fx-font-weight:bold");
         BtnCancel.setStyle("-fx-background-color:#AA5042;-fx-font-family:Droid Sans; -fx-text-fill:White; -fx-font-weight:bold;");
         root.getChildren().addAll(Userfield,passfield,BtnLogin,BtnCancel,label,User,Pass,sign);
-
-
         BtnLogin.setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -105,8 +103,6 @@ public class GameLoginForm extends Application {
                 stage.close();
             }
         });
-
-
         sign.setOnMouseExited(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -150,22 +146,17 @@ public class GameLoginForm extends Application {
                             try {
                                 WU.start(primaryStage);
                                 primaryStage.show();
-
-
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
-
                         }else {
                             JOptionPane.showMessageDialog(null, "Incorrect Username Or Password", "LOGIN FAILED", 2);
                         }
-
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
                 }
             }
-
         });
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
@@ -175,6 +166,4 @@ public class GameLoginForm extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
-
 }

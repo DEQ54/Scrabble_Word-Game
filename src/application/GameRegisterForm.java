@@ -15,7 +15,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
 import javax.swing.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -126,10 +125,7 @@ public class GameRegisterForm extends Application {
         sign.setStyle("-fx-font-family:Tahoma; -fx-text-fill:white; -fx-font-weight:bold");
         Retype.setStyle("-fx-font-family:Tahoma; -fx-text-fill:white; -fx-font-weight:bold");
         BtnCancel.setStyle("-fx-background-color:#AA5042;-fx-font-family:Serif; -fx-text-fill:White; -fx-font-weight:bold;");
-
-
         root.getChildren().addAll( fn,ln,Userfield,passfield,Retypefield,BtnRegister,BtnCancel,label,User,Pass,Retype,first,last,sign);
-
         BtnRegister.setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -150,7 +146,6 @@ public class GameRegisterForm extends Application {
                 GameLoginForm lf = new GameLoginForm();
                 try {
                     lf.start(primaryStage);
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -164,7 +159,6 @@ public class GameRegisterForm extends Application {
                                         String uname = Userfield.getText();
                                         String pass = String.valueOf(passfield.getText());
                                         String re_pass = String.valueOf(Retypefield.getText());
-
                                         if (uname.equals("")) {
                                             JOptionPane.showMessageDialog(null, "Add A Username");
                                         } else if (pass.equals("")) {
@@ -195,7 +189,6 @@ public class GameRegisterForm extends Application {
                                         Retypefield.setText("");
                                         Userfield.setText("");
                                     }
-
                                     public boolean checkUsername(String username) {
                                         PreparedStatement ps;
                                         ResultSet rs;
@@ -214,16 +207,13 @@ public class GameRegisterForm extends Application {
                                         }
                                         return checkUser;
                                     }
-
             });
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
     Image image=new Image("application/Images/yakuzas.jpg");
-
     public static void main(String[] args) {
         launch(args);
     }
-
 }

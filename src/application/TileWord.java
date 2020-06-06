@@ -5,7 +5,6 @@ public class TileWord {
  private String hint;
  private int level;
  private int id;
- 
 public TileWord(String word, String hint, int level, int id) {
 	super();
 	this.word = word;
@@ -13,10 +12,10 @@ public TileWord(String word, String hint, int level, int id) {
 	this.level = level;
 	this.id = id;
 }
-public String getWord() {
+public String GetWord() {
 	return word;
 }
-	public String getHint() {
+	public String GetHint() {
 	return hint;
 }
 }

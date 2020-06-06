@@ -7,22 +7,22 @@ public class LevelTwoProcessAlgorithm {
 	static int hint=0;
 	public static ArrayList<TileWord> levelTwoTileWords;
 	public static void FirstQuestion() {
-		DataBaseConfiguration.GetSecondLevelQuestions();
-		levelTwoTileWords = DataBaseConfiguration.SecondLevelQuestions;
-		LevelTwoImplementation.ShuffledLetters(levelTwoTileWords.get(0).getWord().toUpperCase());
+		HintDataBase.GetSecondLevelQuestions();
+		levelTwoTileWords = HintDataBase.SecondLevelQuestions;
+		LevelTwoImplementation.ShuffledLetters(levelTwoTileWords.get(0).GetWord().toUpperCase());
 	}
 	public static void NextQuestion() {
 		if(QuestionNumber== levelTwoTileWords.size()-1) {
-			Message note = new Message();
+			GameCompletionInterface note = new GameCompletionInterface();
 			note.LevelSuccessful();
 		}else {
 			QuestionNumber+=1;
-			LevelTwoImplementation.ShuffledLetters(levelTwoTileWords.get(QuestionNumber).getWord().toUpperCase());
+			LevelTwoImplementation.ShuffledLetters(levelTwoTileWords.get(QuestionNumber).GetWord().toUpperCase());
 		}
 	}
 
 	public static String getRecentWord() {
-		return levelTwoTileWords.get(QuestionNumber).getWord();
+		return levelTwoTileWords.get(QuestionNumber).GetWord();
 	}
 	public static String getHint()
 	{
@@ -32,7 +32,7 @@ public class LevelTwoProcessAlgorithm {
 		else{
 			hint++;
 		}
-		return levelTwoTileWords.get(QuestionNumber).getHint().toUpperCase();
+		return levelTwoTileWords.get(QuestionNumber).GetHint().toUpperCase();
 	}
 	
 

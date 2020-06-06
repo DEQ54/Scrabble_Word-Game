@@ -7,22 +7,22 @@ public class LevelThreeProcessAlgorithm {
 	static int hint=0;
 	public static ArrayList<TileWord> levelThreeTileWords;
 	public static void FirstQuestion() {
-		DataBaseConfiguration.GetThirdLevelQuestions();
-		levelThreeTileWords = DataBaseConfiguration.ThirdLevelQuestions;
-		LevelThreeImplementation.ShuffledLetters(levelThreeTileWords.get(0).getWord());
+		HintDataBase.GetThirdLevelQuestions();
+		levelThreeTileWords = HintDataBase.ThirdLevelQuestions;
+		LevelThreeImplementation.ShuffledLetters(levelThreeTileWords.get(0).GetWord());
 	}
 	public static void NextQuestion() {
 		if(QuestionNumber== levelThreeTileWords.size()-1) {
-			Message note = new Message();
+			GameCompletionInterface note = new GameCompletionInterface();
 			note.LevelSuccessful();
 		}else {
 			QuestionNumber+=1;
-			LevelThreeImplementation.ShuffledLetters(levelThreeTileWords.get(QuestionNumber).getWord());
+			LevelThreeImplementation.ShuffledLetters(levelThreeTileWords.get(QuestionNumber).GetWord());
 		}
 	}
 
 	public static String getRecentWord() {
-		return levelThreeTileWords.get(QuestionNumber).getWord();
+		return levelThreeTileWords.get(QuestionNumber).GetWord();
 	}
 	public static String getHint()
 	{
@@ -32,7 +32,7 @@ public class LevelThreeProcessAlgorithm {
 		else{
 			hint++;
 		}
-		return levelThreeTileWords.get(QuestionNumber).getHint().toUpperCase();
+		return levelThreeTileWords.get(QuestionNumber).GetHint().toUpperCase();
 	}
 	
 	

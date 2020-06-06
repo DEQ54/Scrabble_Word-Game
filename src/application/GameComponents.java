@@ -12,8 +12,13 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 public class GameComponents {
+	public static Label AssignedScorePoints;
+	static Label Name;
+	static Button Home;
+	static Button Hint;
 	static StackPane pane;
 	static Label level ;
+	static Label Scores;
 	static DropShadow shadow;
 	static StackPane DashBoard;
 	static HBox DashRegion;
@@ -21,11 +26,6 @@ public class GameComponents {
 	static StackPane Shuffle;
 	static BorderPane UserInfo;
 	static VBox ScoreRegion;
-	static Label Scores;
-	public static Label AssignedScorePoints;
-	static Label Name;
-	static Button Home;
-	static Button Hint;
 	public static StackPane SelectLevel(int number) {
 		switch(number) {
 		case 1:
@@ -39,14 +39,12 @@ public class GameComponents {
 			 break;
 			 default:
 				 break;
-			
 		}
 		 pane =new StackPane();
 		pane.getStyleClass().add("main");
 		level.getStyleClass().add("LevelDesign");
 		pane.getChildren().add(level);
 		return pane;
-		
 	}
 	public static HBox AnswerTiles(int levelNumber) {
 		HBox box=new HBox();
@@ -64,7 +62,34 @@ public class GameComponents {
 				break;
 		}
 		return box;
-		
+	}
+	private static HBox LevelOneAnswerBox() {
+		TextField field1=new TextField();
+		TextField field2=new TextField();
+		TextField field3=new TextField();
+		field1.getStyleClass().add("BeginnerLevelAnswer");
+		field2.getStyleClass().add("BeginnerLevelAnswer");
+		field3.getStyleClass().add("BeginnerLevelAnswer");
+		HBox box=new HBox();
+		box.getStyleClass().add("AnswerRegion");
+		box.setEffect(shadow);
+		box.getChildren().addAll(field1,field2,field3);
+		return box;
+	}
+	private static HBox LevelTwoAnswerBox() {
+		TextField field1=new TextField();
+		TextField field2=new TextField();
+		TextField field3=new TextField();
+		TextField field4=new TextField();
+		field1.getStyleClass().add("IntermediateLevelAnswer");
+		field2.getStyleClass().add("IntermediateLevelAnswer");
+		field3.getStyleClass().add("IntermediateLevelAnswer");
+		field4.getStyleClass().add("IntermediateLevelAnswer");
+		HBox box=new HBox();
+		box.getStyleClass().add("AnswerRegion");
+		box.setEffect(shadow);
+		box.getChildren().addAll(field1,field2,field3,field4);
+		return box;
 	}
 	private static HBox LevelThreeAnswerBox() {
 		TextField field1=new TextField();
@@ -83,34 +108,6 @@ public class GameComponents {
 		box.getChildren().addAll(field1,field2,field3,field4,field5);
 		return box;
 	}
-	private static HBox LevelTwoAnswerBox() {
-		TextField field1=new TextField();
-		TextField field2=new TextField();
-		TextField field3=new TextField();
-		TextField field4=new TextField();
-		field1.getStyleClass().add("IntermediateLevelAnswer");
-		field2.getStyleClass().add("IntermediateLevelAnswer");
-		field3.getStyleClass().add("IntermediateLevelAnswer");
-		field4.getStyleClass().add("IntermediateLevelAnswer");
-		HBox box=new HBox();
-		box.getStyleClass().add("AnswerRegion");
-		box.setEffect(shadow);
-		box.getChildren().addAll(field1,field2,field3,field4);
-		return box;
-	}
-	private static HBox LevelOneAnswerBox() {
-		TextField field1=new TextField();
-		TextField field2=new TextField();
-		TextField field3=new TextField();
-		field1.getStyleClass().add("BeginnerLevelAnswer");
-		field2.getStyleClass().add("BeginnerLevelAnswer");
-		field3.getStyleClass().add("BeginnerLevelAnswer");
-		HBox box=new HBox();
-		box.getStyleClass().add("AnswerRegion");
-		box.setEffect(shadow);
-		box.getChildren().addAll(field1,field2,field3);
-		return box;
-	}
 	public static HBox Tiles(int levelNumber) {
 		HBox box=new HBox();
 		switch (levelNumber) {
@@ -127,7 +124,34 @@ public class GameComponents {
 				break;
 		}
 		return box;
-		
+	}
+	private static HBox FirstLevelBoxes() {
+		Button button1=new Button("A");
+		Button button2=new Button("B");
+		Button button3=new Button("C");
+		button1.getStyleClass().add("FirstLevelBox");
+		button2.getStyleClass().add("FirstLevelBox");
+		button3.getStyleClass().add("FirstLevelBox");
+		HBox levelOneBoxes = new HBox();
+		levelOneBoxes.getStyleClass().add("FirstBox");
+		levelOneBoxes.setEffect(shadow);
+		levelOneBoxes.getChildren().addAll(button1,button2,button3);
+		return levelOneBoxes;
+	}
+	private static HBox SecondLevelBoxes() {
+		Button button1=new Button("A");
+		Button button2=new Button("B");
+		Button button3=new Button("C");
+		Button button4=new Button("D");
+		button1.getStyleClass().add("SecondLevelBox");
+		button2.getStyleClass().add("SecondLevelBox");
+		button3.getStyleClass().add("SecondLevelBox");
+		button4.getStyleClass().add("SecondLevelBox");
+		HBox levelTwoBoxes = new HBox();
+		levelTwoBoxes.getStyleClass().add("SecondBox");
+		levelTwoBoxes.setEffect(shadow);
+		levelTwoBoxes.getChildren().addAll(button1,button2,button3,button4);
+		return levelTwoBoxes;
 	}
 	private static HBox ThirdLevelBoxes() {
 		Button button1=new Button("A");
@@ -146,35 +170,6 @@ public class GameComponents {
 		levelThreeBoxes.getChildren().addAll(button1,button2,button3,button4,button5);
 		return levelThreeBoxes;
 	}
-	private static HBox SecondLevelBoxes() {
-		Button button1=new Button("A");
-		Button button2=new Button("B");
-		Button button3=new Button("C");
-		Button button4=new Button("D");
-		button1.getStyleClass().add("SecondLevelBox");
-		button2.getStyleClass().add("SecondLevelBox");
-		button3.getStyleClass().add("SecondLevelBox");
-		button4.getStyleClass().add("SecondLevelBox");
-		HBox levelTwoBoxes = new HBox();
-		levelTwoBoxes.getStyleClass().add("SecondBox");
-		levelTwoBoxes.setEffect(shadow);
-		levelTwoBoxes.getChildren().addAll(button1,button2,button3,button4);
-		return levelTwoBoxes;
-	}
-	private static HBox FirstLevelBoxes() {
-		Button button1=new Button("A");
-		Button button2=new Button("B");
-		Button button3=new Button("C");
-		button1.getStyleClass().add("FirstLevelBox");
-		button2.getStyleClass().add("FirstLevelBox");
-		button3.getStyleClass().add("FirstLevelBox");
-		HBox levelOneBoxes = new HBox();
-		levelOneBoxes.getStyleClass().add("FirstBox");
-		levelOneBoxes.setEffect(shadow);
-		levelOneBoxes.getChildren().addAll(button1,button2,button3);
-		return levelOneBoxes;
-	}
-	
 public static StackPane GameBoard() {
 	 DashBoard =new StackPane();
 	 ScoreRegion =new VBox();
@@ -203,6 +198,5 @@ public static StackPane GameBoard() {
 	UserInfo.getStyleClass().add("UserInfo");
 	Home.getStyleClass().add("HintRegion");
 	return DashBoard;
-	
-}
+    }
 }

@@ -7,12 +7,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class DataBaseConfiguration {
+public class HintDataBase {
 	static Connection connection= MyConnections.getConnection();
 	static ArrayList<TileWord> FirstLevelQuestions;
 	static ArrayList<TileWord> SecondLevelQuestions;
 	static ArrayList<TileWord> ThirdLevelQuestions;
-
 	public static void GetFirstLevelQuestions() {
 		FirstLevelQuestions =new ArrayList<>();
 		 try {
@@ -27,7 +26,6 @@ public class DataBaseConfiguration {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	public static void GetSecondLevelQuestions() {
 		SecondLevelQuestions =new ArrayList<>();
@@ -43,7 +41,6 @@ public class DataBaseConfiguration {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	public static void GetThirdLevelQuestions() {
 		ThirdLevelQuestions =new ArrayList<>();
@@ -59,8 +56,5 @@ public class DataBaseConfiguration {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	
 	}
-
-
 }

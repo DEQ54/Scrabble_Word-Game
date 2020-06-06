@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2020 at 03:42 AM
+-- Generation Time: Jun 05, 2020 at 08:09 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `scramble`
+-- Database: `wordgame`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`fname`, `lname`, `uname`, `pass`, `current_level`, `user_id`) VALUES
-('Dennis', 'Essuman', 'DEQ', 'DEQ', NULL, 1);
+('Dennis', 'Essuman', 'DEQ', 'DEQ', NULL, 1),
+('Samuel', 'Essuman', 'SEQ', 'seq', NULL, 4);
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,7 @@ ALTER TABLE `word`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `word`

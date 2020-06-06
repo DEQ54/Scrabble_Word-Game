@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 
-public class Message {
+public class GameCompletionInterface {
 	public void LevelSuccessful() {
 		Stage stage = new Stage();
 		VBox vbox = new VBox();
@@ -51,7 +51,6 @@ public class Message {
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
-						JOptionPane.showMessageDialog(null, "CHOOSE NEXT LEVEL TO CONTINUE", "LEVEL COMPLETED", 2);
 					default:
 						break;
 				}
@@ -65,7 +64,7 @@ public class Message {
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
-						JOptionPane.showMessageDialog(null, "GAME COMPLETED", "YOU ARE A GENUIS", 3);
+						JOptionPane.showMessageDialog(null, "GAME COMPLETED", "YOU ARE A GENUIS", 1);
 					default:
 						break;
 				}

@@ -55,7 +55,6 @@ public class GameLevelOne extends Application {
         submit.getStyleClass().add("btn");
         DP = new StackPane();
         submit.setOnAction(new EventHandler<ActionEvent>() {
-
             @Override
             public void handle(ActionEvent arg0) {
                 switch (level) {
@@ -65,9 +64,7 @@ public class GameLevelOne extends Application {
                     default:
                         break;
                 }
-
             }
-
             private void GameOneProcess() {
                 word = LevelOneImplementation.GetLettersOnBoxes();
                 String answer = LevelOneProcessAlgorithm.getRecentWord();
@@ -77,7 +74,7 @@ public class GameLevelOne extends Application {
                     if (Compare(word, answer)) {
                         LevelOneImplementation.EmptyFields();
                         LevelOneProcessAlgorithm.NextQuestion();
-                        PointsProcessAlgorithm.IncreasePoints();
+                        PointsAssignmentAlgorithm.IncreasePoints();
                         EmptyHint();
                     } else {
                         LevelOneProcessAlgorithm.NextQuestion();
@@ -85,13 +82,10 @@ public class GameLevelOne extends Application {
                         EmptyHint();
                     }
                 }
-
             }
-
             private void EmptyHint() {
                 hint.setText("");
             }
-
             private boolean Compare(String word, String answer) {
                 boolean state = false;
                 if (word.equals(answer)) {
@@ -99,7 +93,6 @@ public class GameLevelOne extends Application {
                 }
                 return state;
             }
-
         });
         hint = new Label();
         hint.getStyleClass().add("hint");
@@ -109,7 +102,6 @@ public class GameLevelOne extends Application {
         root.setBottom(bottom);
         scene = new Scene(root, 410, 600);
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-
             @Override
             public void handle(WindowEvent arg0) {
                 stage.close();
@@ -119,10 +111,7 @@ public class GameLevelOne extends Application {
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-
-
             }
-
         });
         Hint.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -151,7 +140,6 @@ public class GameLevelOne extends Application {
         stage.show();
     }
         private void LevelSelection(int i) {
-
             switch(i) {
                 case 1:
                     top = GameComponents.Tiles(1);
@@ -160,16 +148,11 @@ public class GameLevelOne extends Application {
                     FIELD =(ObservableList<Node>) middle.getChildren();
                     LevelOneImplementation.GetLevelOneBoxes(BUTTON, FIELD);
                     LevelOneProcessAlgorithm.FirstQuestion();
-
                     break;
                 default:
                     break;
-
             }
-
         }
-
-
     Image image=new Image("application/Images/backs.jpg");
     public static void main(String[] args) {
         launch(args);

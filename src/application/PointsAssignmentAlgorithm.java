@@ -1,6 +1,6 @@
 package application;
 
-public class PointsProcessAlgorithm {
+public class PointsAssignmentAlgorithm {
 	static int points=0;
 	public static void IncreasePoints() {
 		points+=3;
@@ -8,6 +8,6 @@ public class PointsProcessAlgorithm {
 		GameComponents.AssignedScorePoints.setText("0"+points+"");
 	}else {
 		GameComponents.AssignedScorePoints.setText(points+"");
-	}
+	         }
 	}
 }

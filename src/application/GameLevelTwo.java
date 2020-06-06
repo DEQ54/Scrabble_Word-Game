@@ -54,7 +54,6 @@ public class GameLevelTwo extends Application {
         submit.getStyleClass().add("btn");
         DP = new StackPane();
         submit.setOnAction(new EventHandler<ActionEvent>() {
-
             @Override
             public void handle(ActionEvent arg0) {
                 switch (level) {
@@ -64,10 +63,7 @@ public class GameLevelTwo extends Application {
                     default:
                         break;
                 }
-
             }
-
-
             private void GameTwoProcess() {
                 word = LevelTwoImplementation.GetLettersOnBoxes();
                 String answer = LevelTwoProcessAlgorithm.getRecentWord();
@@ -77,7 +73,7 @@ public class GameLevelTwo extends Application {
                     if (Compare(word, answer)) {
                         LevelTwoImplementation.EmptyFields();
                         LevelTwoProcessAlgorithm.NextQuestion();
-                        PointsProcessAlgorithm.IncreasePoints();
+                        PointsAssignmentAlgorithm.IncreasePoints();
                         EmptyHint();
                     } else {
                         LevelTwoImplementation.EmptyFields();
@@ -85,13 +81,10 @@ public class GameLevelTwo extends Application {
                         EmptyHint();
                     }
                 }
-
             }
-
             private void EmptyHint() {
                 hint.setText("");
             }
-
             private boolean Compare(String word, String answer) {
                 boolean state = false;
                 if (word.equals(answer)) {
@@ -108,7 +101,6 @@ public class GameLevelTwo extends Application {
         root.setBottom(bottom);
         scene = new Scene(root, 410, 600);
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-
             @Override
             public void handle(WindowEvent arg0) {
                 stage.close();
@@ -118,10 +110,7 @@ public class GameLevelTwo extends Application {
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-
             }
-
-
         });
         Hint.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -145,14 +134,11 @@ public class GameLevelTwo extends Application {
                 stage.close();
             }
         });
-
         scene.getStylesheets().add(getClass().getResource("GameDesign.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
-
     }
         private void LevelSelection(int i) {
-
             switch(i) {
                 case 2:
                     top = GameComponents.Tiles(2);
@@ -161,15 +147,11 @@ public class GameLevelTwo extends Application {
                     FIELD =(ObservableList<Node>) middle.getChildren();
                     LevelTwoImplementation.GetLevelTwoBoxes(BUTTON, FIELD);
                     LevelTwoProcessAlgorithm.FirstQuestion();
-
                     break;
-
             }
-
         }
     Image image=new Image("application/Images/backs.jpg");
     public static void main(String[] args) {
         launch(args);
     }
-
 }

@@ -55,7 +55,6 @@ public class GameLevelThree extends Application {
         submit.getStyleClass().add("btn");
         DP =new StackPane();
         submit.setOnAction(new EventHandler<ActionEvent>() {
-
             @Override
             public void handle(ActionEvent arg0) {
                 switch(level) {
@@ -65,9 +64,7 @@ public class GameLevelThree extends Application {
                     default:
                         break;
                 }
-
             }
-
             private void GameThreeProcess() {
                 word= LevelThreeImplementation.GetLettersOnBoxes();
                 String answer= LevelThreeProcessAlgorithm.getRecentWord();
@@ -77,7 +74,7 @@ public class GameLevelThree extends Application {
                     if(Compare(word,answer)) {
                         LevelThreeImplementation.EmptyFields();
                         LevelThreeProcessAlgorithm.NextQuestion();
-                        PointsProcessAlgorithm.IncreasePoints();
+                        PointsAssignmentAlgorithm.IncreasePoints();
                         EmptyHint();
                     }else {
                         LevelThreeImplementation.EmptyFields();
@@ -85,14 +82,10 @@ public class GameLevelThree extends Application {
                         EmptyHint();
                     }
                 }
-
-
             }
-
             private void EmptyHint() {
                 hint.setText("");
             }
-
             private boolean Compare(String word, String answer) {
                 boolean state=false;
                 if(word.equals(answer)) {
@@ -100,10 +93,7 @@ public class GameLevelThree extends Application {
                 }
                 return state;
             }
-
         });
-
-
         hint =new Label();
         hint.getStyleClass().add("hint");
         DP = GameComponents.GameBoard();
@@ -112,7 +102,6 @@ public class GameLevelThree extends Application {
         root.setBottom(bottom);
         scene = new Scene(root,410,600);
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-
             @Override
             public void handle(WindowEvent arg0) {
                 stage.close();
@@ -146,13 +135,11 @@ public class GameLevelThree extends Application {
                 stage.close();
             }
         });
-
         scene.getStylesheets().add(getClass().getResource("GameDesign.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
     private void LevelSelection(int i) {
-
         switch(i) {
             case 3:
                 top = GameComponents.Tiles(3);
@@ -161,18 +148,13 @@ public class GameLevelThree extends Application {
                 FIELD =(ObservableList<Node>) middle.getChildren();
                 LevelThreeImplementation.GetLevelThreeBoxes(BUTTON, FIELD);
                 LevelThreeProcessAlgorithm.FirstQuestion();
-
                 break;
             default:
                 break;
-
         }
-
     }
-
     Image image=new Image("application/Images/backs.jpg");
     public static void main(String[] args) {
         launch(args);
     }
-
 }

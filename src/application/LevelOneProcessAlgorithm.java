@@ -8,22 +8,22 @@ public class LevelOneProcessAlgorithm {
 	static int hint=0;
 	public static ArrayList<TileWord> levelOneTileWords;
 	public static void FirstQuestion() {
-		DataBaseConfiguration.GetFirstLevelQuestions();
-		levelOneTileWords = DataBaseConfiguration.FirstLevelQuestions;
-		LevelOneImplementation.ShuffledLetters(levelOneTileWords.get(0).getWord());
+		HintDataBase.GetFirstLevelQuestions();
+		levelOneTileWords = HintDataBase.FirstLevelQuestions;
+		LevelOneImplementation.ShuffledLetters(levelOneTileWords.get(0).GetWord());
 	}
 	public static void NextQuestion() {
 		if(QuestionNumber== levelOneTileWords.size()-1) {
-			Message note = new Message();
+			GameCompletionInterface note = new GameCompletionInterface();
 			note.LevelSuccessful();
 
 		}else {
 			QuestionNumber+=1;
-			LevelOneImplementation.ShuffledLetters(levelOneTileWords.get(QuestionNumber).getWord());
+			LevelOneImplementation.ShuffledLetters(levelOneTileWords.get(QuestionNumber).GetWord());
 		}
 	}
 	public static String getRecentWord() {
-		return levelOneTileWords.get(QuestionNumber).getWord();
+		return levelOneTileWords.get(QuestionNumber).GetWord();
 	}
 	public static String getHint() {
 		if(hint==3){
@@ -33,6 +33,6 @@ public class LevelOneProcessAlgorithm {
 			hint++;
 		}
 		
-		return levelOneTileWords.get(QuestionNumber).getHint();
+		return levelOneTileWords.get(QuestionNumber).GetHint();
 	}
 }
